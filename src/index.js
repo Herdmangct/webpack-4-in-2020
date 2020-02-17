@@ -1,4 +1,4 @@
-// index.js depends on the hello-world.js file
-import helloWorld from "./hello-world";
+import HelloWorldButton from "./components/hello-world-button";
 
-helloWorld();
+const helloWorldButton = new HelloWorldButton();
+helloWorldButton.render();
