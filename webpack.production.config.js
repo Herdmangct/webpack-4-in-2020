@@ -14,6 +14,11 @@ module.exports = {
     publicPath: ""
   },
   mode: "production",
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   module: {
     rules: [
       {
@@ -59,14 +64,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: "hello-world.html",
-      chunks: ["hello-world"],
+      chunks: ["hello-world", "vendors~hello-world~yosemite"],
       title: "Hello, world!",
       template: "src/index.hbs",
       description: "hello world text"
     }),
     new HtmlWebpackPlugin({
       filename: "yosemite.html",
-      chunks: ["yosemite"],
+      chunks: ["yosemite", "vendors~hello-world~yosemite"],
       title: "Yosemite!",
       template: "src/index.hbs",
       description: "yosemite image"
