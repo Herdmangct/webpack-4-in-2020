@@ -8,7 +8,7 @@ module.exports = {
     yosemite: "./src/yosemite.js"
   },
   output: {
-    filename: "[name].js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "./dist"),
     publicPath: ""
   },
@@ -59,8 +59,17 @@ module.exports = {
       ]
     }),
     new HtmlWebpackPlugin({
+      filename: "hello-world.html",
       title: "Hello, world!",
-      template: "src/index.hbs",
+      chunks: ["hello-world"],
+      template: "src/page-template.hbs",
+      description: "some description"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "yosemite.html",
+      title: "Yosemite",
+      chunks: ["yosemite"],
+      template: "src/page-template.hbs",
       description: "some description"
     })
   ]
