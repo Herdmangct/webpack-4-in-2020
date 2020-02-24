@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
+const path = require("path");
+const fs = require("fs");
 
 app.get("/", function(request, result) {
-  result.send("Some dummy content");
+  const pathToHtmlFile = path.resolve(__dirname, "../dist/hello-world.html");
+  const contentFromHtmlFile = fs.readFileSync(pathToHtmlFile, "utf-8");
+  result.send(contentFromHtmlFile);
 });
 
 app.listen(3000, function() {
