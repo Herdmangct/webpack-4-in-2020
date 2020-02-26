@@ -10,5 +10,5 @@ app.get("/", function(request, result) {
 });
 
 app.listen(3000, function() {
-  console.log("The app is running at http://localhost:3000");
+  console.log("The app is up and running at http://localhost:3000");
 });
