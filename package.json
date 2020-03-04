@@ -39,10 +39,13 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "handlebars": "^4.7.3",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.1",
     "react": "^16.12.0"
   }
 }
